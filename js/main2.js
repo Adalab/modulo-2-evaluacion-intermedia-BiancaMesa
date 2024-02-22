@@ -3,10 +3,9 @@
 //Declarar variables 
 //const window = document.querySelector('.js-window');
 const numberCollected = document.querySelector('.js-number-collected');
-const numberCollectedValue = parseInt(numberCollected.value); 
 const submit = document.querySelector('.js-submit');
 const messageClue = document.querySelector('.js-message-clue');
-const numberAttempts = document.querySelector('.js-number-attempts');
+const printNumberAttempts = document.querySelector('.js-print-number-attempts');
 
 //0
 // Función generar N aleatorio
@@ -30,11 +29,14 @@ console.log("Número aleatorio: ", randomNumber);
 //window.onload = getRandomNumberWhenPageLoads; 
 //window.addEventListener('onload', getRandomNumberWhenPageLoads); 
 
-messageClue.value = "El número debe estar entre 1 y 100";
+//Variable que recoge el número de intentos 
+let numberAttempts = 0; 
 
 //3
 //Función manejadora del evento submit
-function handleClick () { 
+function handleClick (e) { 
+    e.preventDefault();
+    const numberCollectedValue = parseInt(numberCollected.value); 
     if (numberCollectedValue < 0 || numberCollectedValue > 100) {
         messageClue.value = "El número debe estar entre 1 y 100"; 
         console.log("El número debe estar entre 1 y 100");
@@ -51,11 +53,14 @@ function handleClick () {
         messageClue.value = "Has ganado campeona!!!";
         console.log("Has ganado campeona!!!")
     }
+
+    numberAttempts += 1; 
+    const result = `Número de intentos: ${numberAttempts}`
+    printNumberAttempts.value = result; 
 }
 
-handleClick();
-
-
+//4
+//handleClick();
 
 //2
 //Evento al hacer click en submit 
