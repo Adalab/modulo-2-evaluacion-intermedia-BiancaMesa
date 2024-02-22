@@ -58,8 +58,8 @@ function pageLoads () {
 }
 
 //0
-//Evento al cargar la pagina web
+//Evento que se desencadena al cargar la pagina 
 window.onload = pageLoads; 
-//window.addEventListener('onload', pageLoads);  NO FUNCIONAs
+//window.addEventListener('onload', pageLoads);  NO FUNCIONA
 
    

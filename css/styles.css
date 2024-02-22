@@ -1,4 +1,33 @@
+
+h1 {
+    color: rgb(125, 137, 170); 
+}
+
+label {
+    margin-bottom: 10px;
+}
+
 .main {
     display: flex;
     flex-direction: column;
+}
+
+.number-collected {
+    background-color: rgb(242, 217, 242);
+    border: none; 
+    margin-bottom: 5px;
+    padding: 4px 0; 
+    width: 300px; 
+}
+
+.submit {
+    width: 300px; 
+}
+
+.message-clue {
+    margin: 4px 0; 
+}
+
+.message-clue, .print-number-attempts {
+    width: 400px; 
 }
