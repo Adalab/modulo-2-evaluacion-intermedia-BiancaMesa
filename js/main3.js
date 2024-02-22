@@ -29,7 +29,7 @@ function pageLoads () {
     function handleClick (e) { 
         e.preventDefault();
         const numberCollectedValue = parseInt(numberCollected.value); 
-        if (numberCollectedValue < 0 || numberCollectedValue > 100) {
+        if (numberCollectedValue < 1 || numberCollectedValue > 100) {
             messageClue.value = "El número debe estar entre 1 y 100"; 
             console.log("El número debe estar entre 1 y 100");
 
@@ -47,7 +47,7 @@ function pageLoads () {
         }
 
         numberAttempts += 1; 
-        const result = `Número de intentos: ${numberAttempts}`
+        const result = `Número de intentos: ${numberAttempts}`;
         printNumberAttempts.value = result; 
     }
 
