@@ -33,16 +33,16 @@ const restartButton = document.querySelector('.js-button-start');
 
         let text = ''; 
         if (numberCollectedValue < 1 || numberCollectedValue > 100) {
-            text = "El número debe estar entre 1 y 100"; 
-
+            text = "Pista: El número debe estar entre 1 y 100"; 
+            
         } else if (numberCollectedValue > randomNumber){
-            text = "Demasiado Alto";
+            text = "Pista: Demasiado Alto";
 
         } else if (numberCollectedValue < randomNumber) {
-            text = "Demasiado Bajo";
+            text = "Pista: Demasiado Bajo";
 
         } else if (numberCollectedValue === randomNumber) {
-            text = "Has ganado campeona!!!";
+            text = "Pista: Has ganado campeona!!!";
         }
 
         messageClue.value = text; 
