@@ -17,37 +17,57 @@ body {
 
 h1 {
     color: rgb(125, 137, 170); 
+    font-size: 45px;
 }
 
 label {
-    margin: 30px 0 10px 0; 
+    font-size: 20px; 
+    margin-bottom: 15px;
 }
 
 .main {
     display: flex;
     flex-direction: column;
+    border: 1px solid rgb(196, 195, 195); 
+    margin: 30px 0 10px 0; 
+    border-radius: 10px;
+    padding: 20px 20px 30px 20px; 
 }
 
 .number-collected {
     background-color: rgb(242, 217, 242);
     border: none; 
     margin-bottom: 5px;
-    padding: 4px 0; 
+    padding: 6px 0; 
     width: 300px; 
     border-radius: 5px;
+    text-align: center;
+}
+
+/* para quitar las flechas de arriba y abajo del input de escribir número */
+.number-collected::-webkit-inner-spin-button, .number-collected::-webkit-outer-spin-button {
+        -webkit-appearance: none;
 }
 
 .submit {
     width: 300px; 
+    padding: 6px 0; 
+    margin-top: 4px; 
+    cursor: pointer; 
+    border: 0.5px solid rgb(127, 122, 122);
+    border-radius: 5px;
 }
 
 .message-clue {
     margin: 4px 0; 
+    margin-top: 12px; 
 }
 
 .message-clue, .print-number-attempts {
     width: 300px; 
-    //border-color: 0px solid transparent;
+    border: 0px solid transparent;
+    text-align: center;
+    color: grey; 
 }
 
 .button {
@@ -55,5 +75,14 @@ label {
     background-color: rgb(219, 231, 241);
     border: none; 
     border-radius: 4px;
-    padding: 7px 7px;
+    padding: 10px 20px;
+    cursor: pointer; 
+    font-size: 15px;
+    color: rgb(78, 76, 76); 
+}
+
+.button:hover {
+    /* border: 1px solid rgb(180, 181, 182);  */
+    /* background-color: rgb(173, 209, 221); */
+    transform: scale(1.); 
 }
